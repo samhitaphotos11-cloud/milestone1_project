@@ -23,7 +23,11 @@ def recommend(product_name, top_n=5):
     scores = list(enumerate(similarity[idx]))
     scores = sorted(scores, key=lambda x: x[1], reverse=True)[1:top_n+1]
     indices = [i[0] for i in scores]
+<<<<<<< HEAD
     return data["Name"].iloc[indices]
+=======
+    return data['Name'].iloc[indices].tolist()
+>>>>>>> 9b048c8 (Initial commit)
 
 # Example test
 if __name__ == "__main__":
